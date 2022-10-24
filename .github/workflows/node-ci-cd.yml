@@ -45,6 +45,7 @@ jobs:
     name: Deployment
     runs-on: ubuntu-latest
     needs: [ci]
+    if: ${{ github.ref_name == 'main' || github.ref_name == 'beta' || github.ref_name == 'alpha' }}
     steps:
       - id: yarn-cache
         name: Get Yarn cache path
