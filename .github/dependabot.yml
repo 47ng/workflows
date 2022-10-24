@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    assignees:
+      - franky47
+    labels:
+      - dependencies
+      - github_actions
