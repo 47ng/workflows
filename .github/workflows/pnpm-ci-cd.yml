@@ -58,8 +58,9 @@ jobs:
         run: pnpm build
       - name: Sign package
         run: |
-          npx sceau generate --addToPackageJson
+          npx sceau generate --addToPackageJson > sceau.json
           cat package.json
+          cat sceau.json
         env:
           SCEAU_BUILD_URL: https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}
           SCEAU_SOURCE_URL: https://github.com/${{github.repository}}/commit/${{ github.sha }}
