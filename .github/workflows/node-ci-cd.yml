@@ -29,7 +29,7 @@ jobs:
         name: Install dependencies
       - run: yarn ci
         name: Run integration tests
-      - uses: coverallsapp/github-action@50c33ad324a9902697adbf2f92c22cf5023eacf1
+      - uses: coverallsapp/github-action@95b1a2355bd0e526ad2fd62da9fd386ad4c98474
         name: Report code coverage
       - uses: 47ng/actions-slack-notify@main
         name: Notify on Slack
